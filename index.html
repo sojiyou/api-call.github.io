@@ -24,6 +24,7 @@
         </div> <!--end of left-section-->
 
         <div class="right-section">
+            <form action="">
             <div class="top-row">
                 <select name="" id="old-testament" onchange="">
                     <option disabled selected hidden>OLD TESTAMENT</option>
@@ -44,19 +45,60 @@
                     <option value="">2 Chronicles</option>
                     <option value="">Ezra</option>
                     <option value="">Nehemiah</option>
-                    
+                    <option value="">Esther</option>
+                    <option value="">Job</option>
+                    <option value="">Paslms</option>
+                    <option value="">Proverbs</option>
+                    <option value="">Ecclesiastes</option>
+                    <option value="">Song of Solomon</option>
+                    <option value="">Isaiah</option>
+                    <option value="">Jeremiah</option>
+                    <option value="">Ezekiel</option>
+                    <option value="">Amos</option>
+                    <option value="">Obadiah</option>
+                    <option value="">Micah</option>
+                    <option value="">Nahum</option>
+                    <option value="">Habakkuk</option>
+                    <option value="">Zephaniah</option>
+                    <option value="">Haggai</option>
+                    <option value="">Zechariah</option>
+                    <option value="">Malachi</option>
                 </select>
                 <select name="" id="new-testament">
                     <option value="disabled selected hidden">NEW TESTAMENT</option>
+                    <option value="">Mathew</option>
+                    <option value="">Mark</option>
+                    <option value="">Luke</option>
+                    <option value="">John</option>
+                    <option value="">Acts</option>
+                    <option value="">Romans</option>
+                    <option value="">1 Corinthians</option>
+                    <option value="">2 Corinthians</option>
+                    <option value="">Galatians</option>
+                    <option value="">1 Thessalonians</option>
+                    <option value="">2 Thessalonians</option>
+                    <option value="">1 Timothy</option>
+                    <option value="">2 Timothy</option>
+                    <option value="">Titus</option>
+                    <option value="">Philemon</option>
+                    <option value="">Hebrews</option>
+                    <option value="">James</option>
+                    <option value="">1 Peter</option>
+                    <option value="">2 Peter</option>
+                    <option value="">1 John</option>
+                    <option value="">2 John</option>
+                    <option value="">Jude</option>
+                    <option value="">Revelation</option>
                 </select>
             </div> <!--end of top-row-->
 
-            <div class="middle-row">
+            <div class="middle-row"> 
                 <label for="">translation</label>
-                <select name="translation" id="">
-                    <option value="">King James Version (KJV)</option>
-                    <option value="">World English Bible (WEB)</option>
-                    <option value="">World English Bible UK (British Edition)</option>
+                <select name="translation" id="translation">
+                    <option disabled selected hidden value="">select version</option>
+                    <option value="kjv">King James Version (KJV)</option>
+                    <option value="web">World English Bible (WEB)</option>
+                    <option value="web-uk">World English Bible UK (British Edition)</option>
                     <option value="">Clementine Latin Vulgate (Latin)</option>
                     <option value="">Joao Ferreira de Almeido  (Portuguese)</option>
                     <option value="">Corrected Cornnilescu Version (Romanian)</option>
@@ -64,16 +106,19 @@
                     <option value="">Bible kralicka (Czech)</option>
 
                 </select>
-                <label for="">Chapter</label>
-                <input type="text" name="">
-                <label for="">Verse</label>
+                <div class="labels">
+                    <p id="chapter-label">Chapter</p>
+                    <p id="verse-label">Verse</p>
+                </div>
             </div><!--end of middle-row-->
 
             <div class="bottom-row">
-                <input type="number">
-                <p>:</p>
-                <input type="number">
+                <input id="chapter-input" type="number" name="">
+                <h2>:</h2>
+                <input id="verse-input" type="number" name="">
             </div>
+
+        </form>
         </div> <!--end of right-section-->
     </div>
     <script src="script.js"></script>
