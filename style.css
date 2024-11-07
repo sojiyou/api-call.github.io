@@ -16,8 +16,11 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     max-width: 1200px;
+    min-width: 600px;
+    padding:5px;
+
 }
 
 .left-section{
@@ -56,22 +59,47 @@ body {
 
 .right-section{
     background-color: #f1ebe5;
+    padding-right: 0;
 }
 
 .right-section .top-row{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.right-section #old-testament, #new-testament {
+select {
+    font: 500 1.1em "Arima";
     text-align: center;
-    font-size: 1.1em;
-    width: 150px;
+    width: 140px;
     padding: 10px;
     margin-right: 5px;
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.middle-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+.middle-row select, label, input{
+    font: 800 12px "Arima";
+}
+.middle-row select{
+    height: 12px;
+}
+
+.bottom-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.bottom-row input{
+    width:40px;
+    justify-content: center;
 }
