@@ -25,19 +25,57 @@
 
         <div class="right-section">
             <div class="top-row">
-                <select name="" id="old-testament">
-                    <option disabled selected hidden>Old Testament</option>
+                <select name="" id="old-testament" onchange="">
+                    <option disabled selected hidden>OLD TESTAMENT</option>
                     <option value="">genesis</option>
                     <option value="">exodus</option>
                     <option value="">leviticus</option>
                     <option value="">numbers</option>
-                    <option value=""></option>
+                    <option value="">Deuteronomy</option>
+                    <option value="">Joshua</option>
+                    <option value="">Judges</option>
+                    <option value="">Ruth</option>
+                    <option value="">1 Samuel</option>
+                    <option value="">2 Samuel</option>
+                    <option value="">1 Kings</option>
+                    <option value="">1 Kings</option>
+                    <option value="">2 Kings</option>
+                    <option value="">1 Chronicles</option>
+                    <option value="">2 Chronicles</option>
+                    <option value="">Ezra</option>
+                    <option value="">Nehemiah</option>
+                    
                 </select>
                 <select name="" id="new-testament">
-                    <option value="disabled selected    hidden">New Testament</option>
+                    <option value="disabled selected hidden">NEW TESTAMENT</option>
                 </select>
+            </div> <!--end of top-row-->
+
+            <div class="middle-row">
+                <label for="">translation</label>
+                <select name="translation" id="">
+                    <option value="">King James Version (KJV)</option>
+                    <option value="">World English Bible (WEB)</option>
+                    <option value="">World English Bible UK (British Edition)</option>
+                    <option value="">Clementine Latin Vulgate (Latin)</option>
+                    <option value="">Joao Ferreira de Almeido  (Portuguese)</option>
+                    <option value="">Corrected Cornnilescu Version (Romanian)</option>
+                    <option value="">Cherokee New Testament (Cherokee)</option>
+                    <option value="">Bible kralicka (Czech)</option>
+
+                </select>
+                <label for="">Chapter</label>
+                <input type="text" name="">
+                <label for="">Verse</label>
+            </div><!--end of middle-row-->
+
+            <div class="bottom-row">
+                <input type="number">
+                <p>:</p>
+                <input type="number">
             </div>
         </div> <!--end of right-section-->
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
