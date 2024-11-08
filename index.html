@@ -93,6 +93,18 @@
             </div> <!--end of top-row-->
 
             <div class="middle-row"> 
+                <div class="labels-inputs">
+                    <div class="labels">
+                        <p>Chapter</p>
+                        <p>Verse</p>
+                    </div>
+                    <div class="inputs">
+                        <input id="chapter-input" type="" name="">
+                        <h2>:</h2>
+                        <input id="verse-input" type="number" name="">
+                    </div>
+                </div>
+
                 <label for="">translation</label>
                 <select name="translation" id="translation">
                     <option disabled selected hidden value="">select version</option>
@@ -104,20 +116,11 @@
                     <option value="">Corrected Cornnilescu Version (Romanian)</option>
                     <option value="">Cherokee New Testament (Cherokee)</option>
                     <option value="">Bible kralicka (Czech)</option>
-
                 </select>
-                <div class="labels">
-                    <p id="chapter-label">Chapter</p>
-                    <p id="verse-label">Verse</p>
-                </div>
+
+                <input id="submitBtn" type="submit" name="submit">
+
             </div><!--end of middle-row-->
-
-            <div class="bottom-row">
-                <input id="chapter-input" type="number" name="">
-                <h2>:</h2>
-                <input id="verse-input" type="number" name="">
-            </div>
-
         </form>
         </div> <!--end of right-section-->
     </div>
