@@ -1,4 +1,17 @@
 async function fetchData(){
+   document.addEventListener("DOMContentLoaded", () => {
+      const oldTestament = document.getElementById("old-testament");
+      const newTestament = document.getElementById("new-testament");
+
+      oldTestament.addEventListener("change", () => {
+         newTestement.selectedIndex = 0;
+      });
+      newTestament.addEventListener("change", () => {
+         oldTestament.selectedIndex = 0;
+      });
+   })
+
+
       try {
          const response = await fetch('https://bible-api.com/john 3:16?translation=kjv');
          if (!response.ok) {
