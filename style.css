@@ -5,6 +5,7 @@
 }
 
 body {
+    display: flex;
     font-family: "Arima";
     background-image: url("images/background_image2.jpg");
     background-size: cover;
@@ -13,6 +14,8 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .container {
@@ -62,15 +65,17 @@ body {
 /* --- end of left section --- */
 
 .right-section{
-    background-color: #f1ebe5;
+    background-color: #ffeede;
     color:#a37d56;
     padding-right: 0;
+    border-radius: 15px;
 }
 
 .right-section .top-row{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 1px;
 }
 #new-testament{
     margin-right: 0;
@@ -84,7 +89,7 @@ select {
     margin-bottom: 5px;
     color:#a37d56;
 }
-select {
+select{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -92,21 +97,25 @@ select {
     border-width: 0.3px;
     border-radius: 5px;
 }
-.middle-row{
+.first-row{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5px;
 }
-.middle-row select, label{
+.first-row label{
     text-align: center;
     font: 800 12px "Arima";
 }
-.middle-row select{
-    height: 12px;
-    width: 100px;
+.second-row{
+    width: 100%;
+    text-align: center;
 }
-
+#translation{
+    width: 150px;
+    font-size: 1em;
+    padding: 4px;
+}
 .labels-inputs {
     display: flex;
     flex-direction: column;
@@ -121,10 +130,19 @@ select {
     gap: 70px;
 }
 .labels-inputs .inputs{
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     gap: 20px;
 
+}
+#translation{
+    height: 30px;
+    font-size: 12px;
+    border-color: #8f6b47;
+    border-width: 0.3px;
+    border-radius: 5px;
+    width: 120px;
 }
 .inputs input{
     width: 65px;
@@ -134,6 +152,7 @@ select {
     text-align: center;
 }
 #submitBtn{
+    cursor: pointer;
     margin-top: 15px;
     padding: 4px;
     font: 800 1em "Arima";
@@ -141,4 +160,29 @@ select {
     border-radius: 5px;
     background-color:  #a37d56;
     border:none;
+}
+#bible-verse-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 900px;
+    font: 800 12px "Arima";
+    margin-top: 50px;
+    background-color: #ffeede;
+    border-radius: 20px;
+    height: 150px;
+    border: 1px solid #8f6b47;
+}
+#bible-verse-container .chapter-verse{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+
+}
+#text-result{
+    margin-top: 5px;
+}
+h4{
+    display: none;
 }
