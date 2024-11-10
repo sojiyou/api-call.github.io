@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="images/website_icon.jpg">
 </head>
 <body>
     <div class="container">
@@ -26,7 +27,7 @@
         <div class="right-section">
             <form action="">
                 <div class="top-row">
-                    <select name="" id="old-testament">
+                    <select name="" id="old-testament" required>
                         <option disabled selected hidden>OLD TESTAMENT</option>
                         <option value="">genesis</option>
                         <option value="">exodus</option>
@@ -64,7 +65,7 @@
                         <option value="">Zechariah</option>
                         <option value="">Malachi</option>
                     </select>
-                    <select name="" id="new-testament">
+                    <select name="" id="new-testament" required>
                         <option disabled selected hidden>NEW TESTAMENT</option>
                         <option value="">Mathew</option>
                         <option value="">Mark</option>
@@ -98,13 +99,13 @@
                             <p>Verse</p>
                         </div>
                         <div class="inputs">
-                            <input id="chapter-input" type="number" name="">
+                            <input id="chapter-input" type="number" name="" min="1" max="150">
                             <h2>:</h2>
-                            <input id="verse-input" type="number" name="">
+                            <input id="verse-input" type="number" name="" min="1" max="176">
                         </div>
                     </div>
                     <div class="second-row">
-                        <select name="" id="translation" >
+                        <select name="" id="translation" required>
                             <option disabled selected hidden value="">select version</option>
                             <option value="kjv">King James Version (KJV)</option>
                             <option value="web">World English Bible (WEB)</option>
@@ -115,7 +116,7 @@
                             <option value="bkr">Bible kralicka (Czech)</option>
                         </select>
 
-                        <input id="submitBtn" type="submit" name="submit">
+                        <input id="submitBtn" type="submit" name="submit" value="search">
                     </div>
                 </div>
             </form>
@@ -128,7 +129,7 @@
             <p id="chapter-result"></p>
             <h4 id="separator">:</h4>
             <p id="verse-result"></p>
-            <p id="translation-result"></p>
+            <p id="translation-result">bible verse will be shown here</p>
         </div>
         <p id="text-result"></p>
     </div>
