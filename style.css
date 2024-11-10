@@ -7,7 +7,7 @@
 body {
     display: flex;
     font-family: "Arima";
-    background-image: url("images/background_image2.jpg");
+    background-image: url("images/background_image.jpg");
     background-size: cover;
     color:#a37d56;
     display: flex;
@@ -161,6 +161,13 @@ select{
     background-color:  #a37d56;
     border:none;
 }
+#submitBtn:hover{
+    font-family: "Arima";
+    font-weight: 800;
+    font-size: 1em;
+    background-color: #8f6b47;
+    color: #ffffff;
+}
 #bible-verse-container{
     display: flex;
     flex-direction: column;
@@ -181,8 +188,10 @@ select{
 
 }
 #text-result{
+    font-size: 1.1em;
     margin-top: 5px;
 }
 h4{
     display: none;
 }
+
