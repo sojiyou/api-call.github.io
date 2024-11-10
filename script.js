@@ -3,7 +3,23 @@ async function fetchData(b, t, c, v){
    translation = t; 
    chapter = c; 
    verse = v;
+   let book_result = document.getElementById("book-result");
+   let translation_result = document.getElementById("translation-result");
+   let chapter_result = document.getElementById("chapter-result");
+   let verse_result = document.getElementById("verse-result");
+   let text_result = document.getElementById("text-result");
+   let h4 = document.getElementById("separator");
+   if(!book || !translation || !chapter || !verse){
+      text_result.textContent = "Please fill up all the fields.";
+      return;
+   }
+   if(chapter < 1 || chapter > 150 || verse < 1 || verse > 176){
+      text_result.textContent = "Invalid chapter or verse number.";
+      return;
+   }
 
+
+// ----------------------------------------------------------------------------------------------//
    const url = `https://bible-api.com/${book}${chapter}:${verse}?translation=${translation}`;
 
       try {
@@ -19,13 +35,6 @@ async function fetchData(b, t, c, v){
          const bibleVerse = verseData.verse;
          const bibleText = verseData.text;
 
-         let book_result = document.getElementById("book-result");
-         let translation_result = document.getElementById("translation-result");
-         let chapter_result = document.getElementById("chapter-result");
-         let verse_result = document.getElementById("verse-result");
-         let text_result = document.getElementById("text-result");
-         let h4 = document.getElementById("separator");
-
          book_result.textContent = bibleBook;
          translation_result.textContent = translation;
          chapter_result.textContent = bibleChapter;
@@ -36,7 +45,8 @@ async function fetchData(b, t, c, v){
       } catch (error) {
          console.log("Error: " + error.message);
       }
-}
+
+} // end of async fetchData() function
 
 document.addEventListener("DOMContentLoaded", () => {
    const oldTestament = document.getElementById("old-testament");
@@ -48,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
    newTestament.addEventListener("change", () => {
       oldTestament.selectedIndex = 0;
    });
-});
+}); //end of DOMContent
 
 /**
  *  *--- Start of the Script ---*
@@ -71,8 +81,8 @@ submitBtn.addEventListener("click", () => {
    }else if (newTestament.selectedIndex > 0){
       book = newTestament.options[newTestament.selectedIndex].text;
    }
-
-   fetchData(book, translation, chapter,verse);
+   
+      fetchData(book, translation, chapter,verse);
 });
 
 
